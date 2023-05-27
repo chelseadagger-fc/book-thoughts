@@ -1,1 +1,158 @@
+body {
+    background-color: antiquewhite;
+}
 
+#mainTitle {
+    font-family: Playfair;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 2%;
+    margin-bottom: 1%;
+}
+
+/* #mainHeader {
+    background-image:
+    linear-gradient(to top, rgba(85, 55, 11, 0.52), rgba(153, 136, 127, 0.73)), 
+    url('./images/books-header.jpg')
+} */
+
+p#subTitle {
+    font-family: Playfair;
+    text-align: center;
+    margin-top: 0;
+    font-size: .9rem;
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+}
+
+/* .navigation > li > a {
+    color: white;
+} */
+
+.navigation a {
+    font-family: Playfair;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: black;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 150px;
+    gap: 1.5%;
+    margin: 0 7.5%;
+}
+
+
+
+
+
+
+
+/* NAVIGATION BAR, REACTIVE */
+
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-flow: column wrap;
+        padding: 0;
+    }
+    .navigation a { 
+        text-align: center; 
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255,0.3); 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+
+
+
+
+/* CSS FOR ITEMS */
+
+.item {
+    text-align: center;
+    position: relative;
+}
+
+.item > p {
+    color: white;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    margin-left: 20px;
+}
+
+#item-1 {
+    background-image: 
+    linear-gradient(to bottom, rgba(94, 96, 107, 0.52), rgba(7, 7, 7, 0.73)),
+    url('./images/eco_portrait.jpg');
+    grid-column: span 3;
+    grid-row: span 6;
+    text-align:end;
+    font-size: 2.5rem;
+}
+
+#item-2 {
+    background-image: 
+    linear-gradient(to bottom, rgba(94, 96, 107, 0.52), rgba(7, 7, 7, 0.73)),
+    url('./images/book_name_of_the_rose.jpg');
+    grid-column: span 3;
+    grid-row: span 2;
+    font-size: 2rem;
+}
+
+#item-3 {
+    background-image: 
+    linear-gradient(to bottom, rgba(94, 96, 107, 0.52), rgba(7, 7, 7, 0.73)),
+    url('./images/book_foucaults_pendulum.jpg');
+    grid-column: span 3;
+    grid-row: span 2;
+    font-size: 2rem;
+}
+
+#item-4 {
+    background-image: 
+    linear-gradient(to bottom, rgba(94, 96, 107, 0.52), rgba(7, 7, 7, 0.73)),
+    url('./images/book_baudolino.jpg');
+    grid-column: span 3;
+    grid-row: span 2;
+    font-size: 2rem;
+}
+
+#item-5 {
+    background-image: 
+    linear-gradient(to bottom, rgba(94, 96, 107, 0.52), rgba(7, 7, 7, 0.73)),
+    url('./images/dostoyevsky.jpg');
+    grid-column: span 6;
+    grid-row: span 2;
+    font-size: 2.5rem;
+}
+
+#item-6 {
+    background-color: peru;
+    grid-column: span 6;
+    grid-row: span 2;
+    font-size: 2.5rem;
+}
